@@ -1,7 +1,7 @@
 # Multi Framework Cacher Script
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fredbradley/cacher.svg?style=flat-square)](https://packagist.org/packages/fredbradley/cacher)
-[![Build Status](https://img.shields.io/travis/fredbradley/cacher/master.svg?style=flat-square)](https://travis-ci.org/fredbradley/cacher)
+[![Build Status](https://img.shields.io/travis/fredbradley/multiframework-cacher/master.svg?style=flat-square)](https://travis-ci.org/fredbradley/multiframework-cacher)
 ![StyleCI Status](https://github.styleci.io/repos/278584366/shield)
 [![Total Downloads](https://img.shields.io/packagist/dt/fredbradley/cacher.svg?style=flat-square)](https://packagist.org/packages/fredbradley/xirrusapi)
 
