@@ -82,4 +82,3 @@ class Cacher
         return \Illuminate\Support\Facades\Cache::remember($key, $minutes, $callback);
     }
 }
-
