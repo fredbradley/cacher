@@ -43,7 +43,7 @@ class Cacher
                 break;
             default:
                 // No cache driver could be found, so we just return the callback value.
-                return $callback;
+                return call_user_func($callback);
                 break;
         }
     }
