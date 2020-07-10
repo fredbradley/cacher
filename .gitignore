@@ -1,1 +1,5 @@
+build
+composer.lock
+coverage
+.phpunit.result.cache
 vendor

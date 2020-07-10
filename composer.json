@@ -1,18 +1,30 @@
 {
     "name": "fredbradley/cacher",
     "description": "A Multiframework compatibile cacher script.",
-"license": "MIT",
+    "license": "MIT",
     "authors": [
         {
             "name": "Fred Bradley",
             "email": "code@fredbradley.co.uk",
-		"role": "Developer"
+            "role": "Developer"
         }
     ],
     "require": {
-"php": "^7.1"
-},
-"autoload": {
-"psr-4": { "FredBradley\\Cacher\\": "src"}
-}
+        "php": "^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "autoload": {
+        "psr-4": {
+            "FredBradley\\Cacher\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "FredBradley\\Cacher\\Tests\\": "tests"
+    }
 }
