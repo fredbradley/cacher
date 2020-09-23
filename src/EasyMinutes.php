@@ -1,6 +1,5 @@
 <?php
 
-
 namespace FredBradley\Cacher;
 
 /**
