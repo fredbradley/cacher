@@ -11,6 +11,11 @@ class EasySeconds
     public const A_MONTH = 30 * self::A_DAY; // Alright, not always true, but good enough
     public const A_YEAR = 365 * self::A_DAY;
 
+    public static function minutes(int $int): int
+    {
+        return $int * self::A_MINUTE;
+    }
+
     public static function hours(int $int): int
     {
         return $int * self::AN_HOUR;
