@@ -93,7 +93,7 @@ class Cacher
     public function getLaravelExpiryTime(string $key): \Carbon\Carbon
     {
         $parts = array_slice(str_split($hash = sha1($key), 2), 0, 2);
-        $path = storage_path('framework/cache/data')."/".implode('/', $parts).'/'.$hash;
+        $path = storage_path('framework/cache/data') . "/" . implode('/', $parts) . '/' . $hash;
         $expiryTimeStamp = substr(file_get_contents($path), 0, 10);
         return \Carbon\Carbon::createFromTimestamp($expiryTimeStamp);
     }
