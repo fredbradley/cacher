@@ -79,6 +79,22 @@ class Cacher
      */
     public function saveLaravelCache(string $key, int $seconds, \Closure $callback)
     {
-        return \Illuminate\Support\Facades\Cache::remember($key, $seconds, $callback);
+        $return = \Illuminate\Support\Facades\Cache::remember($key, $seconds, $callback);
+        \Log::error('Cacher saved '.$key.' until '.$this->getLaravelExpiryTime($key)->format('H:i:s'));
+        return $return;
+    }
+
+    /**
+     * @param  string  $key
+     * @deprecated Temporary inclusion to debug an issue
+     *
+     * @return \Carbon\Carbon
+     */
+    public function getLaravelExpiryTime(string $key): \Carbon\Carbon
+    {
+        $parts = array_slice(str_split($hash = sha1($key), 2), 0, 2);
+        $path = storage_path('framework/cache/data')."/".implode('/', $parts).'/'.$hash;
+        $expiryTimeStamp = substr(file_get_contents($path), 0, 10);
+        return \Carbon\Carbon::createFromTimestamp($expiryTimeStamp);
     }
 }
