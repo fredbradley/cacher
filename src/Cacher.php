@@ -83,6 +83,9 @@ class Cacher
             \Log::error('Cacher looking for ' . $key); // until '.$this->getLaravelExpiryTime($key)->format('H:i:s'));
         }
 
+        // Test - ignore the cache, and just run the callback;
+        return $callback;
+
         return \Illuminate\Support\Facades\Cache::remember($key, $seconds, $callback);
     }
 
