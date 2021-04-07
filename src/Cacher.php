@@ -84,7 +84,7 @@ class Cacher
         }
 
         // Test - ignore the cache, and just run the callback;
-        return $callback;
+        return $callback();
 
         return \Illuminate\Support\Facades\Cache::remember($key, $seconds, $callback);
     }
