@@ -79,9 +79,11 @@ class Cacher
      */
     public function saveLaravelCache(string $key, int $seconds, \Closure $callback)
     {
-        $return = \Illuminate\Support\Facades\Cache::remember($key, $seconds, $callback);
-        // \Log::error('Cacher saved '.$key.' until '.$this->getLaravelExpiryTime($key)->format('H:i:s'));
-        return $return;
+        if (\Illuminate\Support\Facades\Cache::get($key)===null) {
+             \Log::error('Cacher looking for '.$key); // until '.$this->getLaravelExpiryTime($key)->format('H:i:s'));
+        }
+
+        return \Illuminate\Support\Facades\Cache::remember($key, $seconds, $callback);
     }
 
     /**
