@@ -3,7 +3,6 @@
 
 namespace FredBradley\Cacher;
 
-
 /**
  * Interface CacherFrameworkInterface
  * @package FredBradley\Cacher

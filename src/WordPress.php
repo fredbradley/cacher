@@ -3,7 +3,6 @@
 
 namespace FredBradley\Cacher;
 
-
 /**
  * Class WordPress
  * @package FredBradley\Cacher
