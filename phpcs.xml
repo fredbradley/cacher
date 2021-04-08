@@ -25,6 +25,9 @@
        patterns on the command line.
     -->
     <exclude-pattern>*/coverage/*</exclude-pattern>
+    <exclude-pattern>*/build/*</exclude-pattern>
+    <exclude-pattern>*/tests/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
 
     <!--
        You can hard-code command line values into your custom standard.
@@ -48,10 +51,6 @@
        PEAR standard exists inside the PHP_CodeSniffer install
        directory.
     -->
-    <rule ref="PSR2">
-        <!-- Had to exclude this due to the spelling of iPad -->
-        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
-    </rule>
-
+    <rule ref="PSR2"/>
 
 </ruleset>
