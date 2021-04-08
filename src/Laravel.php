@@ -19,7 +19,7 @@ class Laravel implements CacherFrameworkInterface
      */
     public function remember(string $key, int $seconds, \Closure $callback)
     {
-        return Cache::remember($key, $seconds, $callback);
+        return Cache::remember($key, $seconds, $callback); /** @phpstan-ignore-line */
     }
 
     /**
@@ -29,7 +29,7 @@ class Laravel implements CacherFrameworkInterface
      */
     public function get(string $key)
     {
-        return Cache::get($key);
+        return Cache::get($key); /** @phpstan-ignore-line */
     }
 
     /**
@@ -39,6 +39,6 @@ class Laravel implements CacherFrameworkInterface
      */
     public function forget(string $key)
     {
-        return Cache::forget($key);
+        return Cache::forget($key); /** @phpstan-ignore-line */
     }
 }

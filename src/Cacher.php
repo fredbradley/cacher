@@ -10,7 +10,7 @@ use FredBradley\Cacher\Exceptions\FrameworkNotDetected;
 class Cacher
 {
     /**
-     * @var string
+     * @var \FredBradley\Cacher\CacherFrameworkInterface
      */
     private $framework = null;
 
@@ -36,7 +36,8 @@ class Cacher
     public static function forget(string $key)
     {
         $instance = new self();
-        if (is_null($instance->framework)) {
+
+        if ($instance->framework === null) {
             throw new FrameworkNotDetected("Framework Not Detected. Could not find data for " . $key, 400);
         }
         return call_user_func([$instance->framework, 'forget'], $key);
@@ -51,7 +52,8 @@ class Cacher
     public static function get(string $key)
     {
         $instance = new self();
-        if (is_null($instance->framework)) {
+
+        if ($instance->framework === null) {
             throw new FrameworkNotDetected("Framework Not Detected. Could not find data for " . $key, 400);
         }
         return call_user_func([$instance->framework, 'get'], $key);
@@ -81,7 +83,8 @@ class Cacher
     public static function remember(string $key, int $seconds, \Closure $callback)
     {
         $instance = new self();
-        if (is_null($instance->framework)) {
+
+        if ($instance->framework === null) {
             return call_user_func($callback);
         }
         return call_user_func([$instance->framework, 'remember'], $key, $seconds, $callback);
