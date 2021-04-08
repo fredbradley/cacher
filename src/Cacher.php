@@ -37,7 +37,7 @@ class Cacher
     {
         $instance = new self();
         if (is_null($instance->framework)) {
-            throw new FrameworkNotDetected("Framework Not Detected. Could not find data for ".$key, 400);
+            throw new FrameworkNotDetected("Framework Not Detected. Could not find data for " . $key, 400);
         }
         return call_user_func([$instance->framework, 'forget'], $key);
     }
@@ -52,7 +52,7 @@ class Cacher
     {
         $instance = new self();
         if (is_null($instance->framework)) {
-            throw new FrameworkNotDetected("Framework Not Detected. Could not find data for ".$key, 400);
+            throw new FrameworkNotDetected("Framework Not Detected. Could not find data for " . $key, 400);
         }
         return call_user_func([$instance->framework, 'get'], $key);
     }
