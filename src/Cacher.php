@@ -36,7 +36,7 @@ class Cacher
     public static function forget(string $key)
     {
         $instance = new self();
-      
+
         if ($instance->framework === null) {
             throw new FrameworkNotDetected("Framework Not Detected. Could not find data for " . $key, 400);
         }
