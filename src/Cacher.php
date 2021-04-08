@@ -36,6 +36,7 @@ class Cacher
     public static function forget(string $key)
     {
         $instance = new self();
+      
         if ($instance->framework === null) {
             throw new FrameworkNotDetected("Framework Not Detected. Could not find data for " . $key, 400);
         }
@@ -51,6 +52,7 @@ class Cacher
     public static function get(string $key)
     {
         $instance = new self();
+
         if ($instance->framework === null) {
             throw new FrameworkNotDetected("Framework Not Detected. Could not find data for " . $key, 400);
         }
@@ -81,6 +83,7 @@ class Cacher
     public static function remember(string $key, int $seconds, \Closure $callback)
     {
         $instance = new self();
+
         if ($instance->framework === null) {
             return call_user_func($callback);
         }
