@@ -1,6 +1,6 @@
 {
     "name": "fredbradley/cacher",
-    "description": "A Multiframework compatible cacher script.",
+    "description": "A Multiframework compatible Cache interface.",
     "license": "MIT",
     "authors": [
         {
