@@ -1,7 +1,6 @@
 # Multi Framework Cacher Script
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fredbradley/cacher.svg?style=flat-square)](https://packagist.org/packages/fredbradley/cacher)
-[![Build Status](https://img.shields.io/travis/fredbradley/multiframework-cacher/master.svg?style=flat-square)](https://travis-ci.org/fredbradley/multiframework-cacher)
 ![StyleCI Status](https://github.styleci.io/repos/278584366/shield)
 [![Total Downloads](https://img.shields.io/packagist/dt/fredbradley/cacher.svg?style=flat-square)](https://packagist.org/packages/fredbradley/xirrusapi)
 
@@ -18,14 +17,20 @@ composer require fredbradley/cacher
 ## Usage
 
 ``` php
-// Override default options
 use FredBradley\Cacher;
-Cacher::getAndSet('cache_key_name', 10, function() {
+
+Cacher::remember('cache_key_name', 300, function() {
     // Your logic
     $value = "value";
     return $value;
 });
+
+/*
+ * Will set the value of 'cache_key_name' to the return value of the Closure callback and 
+ * save in the cache for 5 minutes (300 seconds)
+ */
 ```
+
 There's only a small handful of methods in the one class. It's really basic, but amazingly wonderful!
 
 ### Testing
