@@ -3,7 +3,7 @@
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/fredbradley/cacher.svg?style=flat-square)](https://packagist.org/packages/fredbradley/cacher)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 ![StyleCI Status](https://github.styleci.io/repos/278584366/shield)
-[![Total Downloads](https://img.shields.io/packagist/dt/fredbradley/cacher.svg?style=flat-square)](https://packagist.org/packages/fredbradley/xirrusapi)
+[![Total Downloads](https://img.shields.io/packagist/dt/fredbradley/cacher.svg?style=flat-square)](https://packagist.org/packages/fredbradley/cacher)
 
 In my day job, I work regularly with both Laravel and WordPress. I also make packages that are needed to be compatible with both. It becomes a right pain, when it comes to caching, to write out if statements for each framework. So I created this small script which does that for me.    
 

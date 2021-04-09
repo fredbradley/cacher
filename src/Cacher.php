@@ -3,6 +3,8 @@
 namespace FredBradley\Cacher;
 
 use FredBradley\Cacher\Exceptions\FrameworkNotDetected;
+use FredBradley\Cacher\Frameworks\Laravel;
+use FredBradley\Cacher\Frameworks\WordPress;
 
 /**
  * Class Cacher
@@ -10,7 +12,7 @@ use FredBradley\Cacher\Exceptions\FrameworkNotDetected;
 class Cacher
 {
     /**
-     * @var \FredBradley\Cacher\CacherFrameworkInterface
+     * @var \FredBradley\Cacher\Frameworks\CacherFrameworkInterface
      */
     private $framework = null;
 

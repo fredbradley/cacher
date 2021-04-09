@@ -1,6 +1,6 @@
 <?php
 
-namespace FredBradley\Cacher;
+namespace FredBradley\Cacher\Frameworks;
 
 /**
  * Interface CacherFrameworkInterface

@@ -31,5 +31,9 @@
     },
     "autoload-dev": {
         "FredBradley\\Cacher\\Tests\\": "tests"
+    },
+    "suggest": {
+        "fredbradley/easytime": "Easy human readable representation of seconds and minutes"
     }
+
 }
