@@ -18,7 +18,7 @@ interface CacherFrameworkInterface
     /**
      * @param  string  $key
      *
-     * @return mixed
+     * @return bool
      */
     public function forget(string $key);
 

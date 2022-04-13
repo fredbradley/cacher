@@ -32,10 +32,10 @@ class Cacher
     /**
      * @param  string  $key
      *
-     * @return false|mixed
+     * @return bool
      * @throws \FredBradley\Cacher\Exceptions\FrameworkNotDetected
      */
-    public static function forget(string $key)
+    public static function forget(string $key): bool
     {
         $instance = new self();
 
@@ -48,7 +48,7 @@ class Cacher
     /**
      * @param  string  $key
      *
-     * @return false|mixed
+     * @return mixed
      * @throws \FredBradley\Cacher\Exceptions\FrameworkNotDetected
      */
     public static function get(string $key)
